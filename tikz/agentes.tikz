@@ -1,0 +1,18 @@
+
+\begin{tikzpicture}[node distance=0.75cm]
+
+% Nodes
+\node (sensores) [block, fill=orange!70] {Sensores};
+\node (receptor) [process, left=2cm of sensores] {Receptor};
+\node (condicion) [process, fill=pink!50, below=1cm of receptor] {Condici\'on\ Acci\'on\ Reglas\ (If-then)};
+\node (emisor) [process, below=1cm of condicion] {Emisor};
+\node (actuadores) [block, fill=orange!70, below=3cm of sensores] {Actuadores};
+
+% Arrows
+\draw [arrow] (receptor) -- (condicion);
+\draw [arrow] (sensores) -- (receptor);
+\draw [arrow] (condicion) -- (emisor);
+\draw [arrow] (emisor) -- (actuadores);
+
+\end{tikzpicture}
+

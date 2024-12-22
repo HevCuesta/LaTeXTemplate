@@ -1,6 +1,5 @@
 \documentclass[oneside]{book}
 
-% Paquetes necesarios
 \usepackage[utf8]{inputenc} 
 \usepackage[T1]{fontenc}    
 \usepackage[spanish]{babel}  
@@ -10,20 +9,43 @@
 \usepackage{fullpage}       
 \usepackage{titlesec}     
 \usepackage{graphicx}          
-\usepackage{ragged2e}          
+\usepackage{ragged2e}       
+\usepackage{multicol}
+\usepackage{tcolorbox}
+\usepackage{listings}   
+\usepackage{tikz}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{amsmath}
 \usepackage[backend=biber,style=numeric]{biblatex}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18} 
+
 
 \addbibresource{referencias.bib} 
+
+
+\usetikzlibrary{shapes.geometric, arrows, positioning, calc, shapes.callouts}
+
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=gray!30]
+\tikzstyle{block} = [rectangle, draw, text centered, rounded corners, minimum height=1cm, minimum width=2.5cm]
+\tikzstyle{data} = [cylinder, draw, shape aspect=0.3, shape border rotate=90, text centered, minimum height=2cm, minimum width=2cm, fill=blue!10]
+\tikzstyle{process} = [rectangle, draw, text centered, rounded corners, minimum height=1cm, fill=blue!30]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+\tikzstyle{output} = [ellipse, draw, text centered, minimum height=1cm, fill=blue!10]
+\tikzstyle{decision} = [diamond, draw, text centered, minimum height=1cm, fill=red!20]
+\tikzstyle{learning} = [rectangle, draw, text centered, rounded corners, minimum height=1cm, fill=red!30]
+
+
 
 % Configuración de encabezados y pies de página
 \setlength{\headheight}{15.0pt}   % Ajuste de headheight para evitar advertencias
 \pagestyle{fancy}
-\fancyhf{}   
 
 \fancypagestyle{plain}{
     \fancyhf{}
     \fancyhead[R]{Tema \thechapter}
-    \fancyhead[L]{Asignatura}
+    \fancyhead[L]{Inteligencia Artificial}
     \fancyfoot[C]{\thepage}
     \renewcommand{\headrulewidth}{0.4pt}
 }
@@ -59,9 +81,14 @@
 \chapter{} % Define el título del capítulo
 \input{Tema1}
 
-\chapter{}
+\chapter{} 
 \input{Tema2}
 
+\chapter{}
+\input{Tema3} 
+
+\chapter{}
+\input{Tema4}
 
 \input{Referencias}
 

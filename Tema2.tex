@@ -1,1 +1,42 @@
-\textbf{HMM}
+\textbf{El tema 2 sirve como una introducción un poco mas detalladas a los sistemas inteligentes y los agentes inteligentes.}
+
+
+\section{Agentes inteligentes}
+
+Los agentes inteligentes son un \textit{subset} de los sistemas inteligentes que tienen la capacidad de percibir su entorno y actuar de manera autónoma para alcanzar sus objetivos. Estos agentes pueden ser simples o complejos, y su comportamiento puede ser predefinido o aprendido a través de la experiencia.
+Estos agentes inteligentes no tienen porque ser físicos o virtuales, ya que pueden ser ambos. La arquitectura de un sistema inteligente normalmente tiene la siguiente estructura:
+
+\begin{figure}[htbp]
+    \centering
+    \input{tikz/agentes.tikz}
+    \caption{Arquitectura agentes inteligentes}
+    \label{fig:agentes_inteligentes}
+\end{figure}
+
+Dicho de la manera más sencilla, un agente inteligente es: Un sistema informático que interpreta su \textbf{entorno} mediante \textbf{sensores} e interactúa con él usando \textbf{actuadores}. Este entonro como he dicho antes puede ser virtual o físico, ya sea un salón para una aspiradora robótica, un proyecto para el copilot\dots E igual con los sensores, de la misma manera que con los actuadores.
+
+\subsection{Características de los agentes inteligentes}
+
+Las características principales de los agentes inteligentes incluyen:
+
+\begin{itemize}
+    \item \textbf{Reactividad:} La capacidad de un agente para percibir su entorno y responder a los cambios en tiempo real.
+    \item \textbf{Proactividad:} La capacidad de un agente para tomar la iniciativa y actuar de manera autónoma para alcanzar sus objetivos.
+    \item \textbf{Adaptabilidad:} La capacidad de un agente para aprender de la experiencia y mejorar su comportamiento a lo largo del tiempo.
+    \item \textbf{Comunicación:} La capacidad de un agente para interactuar y colaborar con otros agentes o sistemas para lograr objetivos comunes.
+    \item \textbf{Autonomía:} La capacidad de un agente para operar sin intervención humana directa, tomando decisiones por sí mismo.
+    \item \textbf{Racionalidad:} La capacidad de un agente para tomar decisiones basadas en la lógica y la información disponible para maximizar sus objetivos.
+\end{itemize}
+
+\subsection{Tipos de entornos}
+
+Los entornos pueden ser de muchos tipos, y es además el aspecto más importante de un sistema inteligente, ya que este luego decidirá los sensores y actuadores que necesita, además de todas las acciones que puede hacer o hace. Los principales entornos que existen son:
+
+\begin{itemize}
+    \item \textbf{Entorno completamente observable vs. parcialmente observable:} En un entorno completamente observable, el agente tiene acceso a toda la información necesaria para tomar decisiones. En un entorno parcialmente observable, el agente solo tiene acceso a una parte de la información.
+    \item \textbf{Entorno determinista vs. estocástico:} En un entorno determinista, las acciones del agente determinan de manera precisa el estado siguiente del entorno. En un entorno estocástico, hay un grado de incertidumbre en los resultados de las acciones del agente.
+    \item \textbf{Entorno estático vs. dinámico:} En un entorno estático, el entorno no cambia mientras el agente está decidiendo su acción. En un entorno dinámico, el entorno puede cambiar mientras el agente está decidiendo su acción.
+    \item \textbf{Entorno discreto vs. continuo:} En un entorno discreto, hay un número finito de estados y acciones posibles. En un entorno continuo, los estados y acciones pueden variar de manera continua.
+    \item \textbf{Entorno episódico vs. secuencial:} En un entorno episódico, la experiencia del agente se divide en episodios independientes. En un entorno secuencial, las decisiones del agente afectan estados futuros y se deben considerar a largo plazo.
+    \item \textbf{Entorno conocido vs. desconocido:} En un entorno conocido, el agente tiene conocimiento previo de las reglas del entorno. En un entorno desconocido, el agente debe aprender las reglas a través de la interacción.
+\end{itemize}

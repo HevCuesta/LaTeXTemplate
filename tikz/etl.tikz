@@ -1,0 +1,26 @@
+\begin{tcolorbox}[title=Proceso de ETL]
+\centering
+\begin{tikzpicture}[node distance=0.5cm and 0.5cm, scale=0.8, every node/.style={scale=0.8}]
+
+% Nodes for ETL process
+\node[data] (data) {Datos};
+\node[process, below right=0.3cm and 0.3cm of data] (selection) {Selecci\'on};
+\node[data, below right=0.3cm and 0.3cm of selection] (selected) {Datos seleccionados};
+\node[process, below right=0.3cm and 0.3cm of selected] (processing) {Procesamiento};
+\node[data, below right=0.3cm and 0.3cm of processing] (processed) {Datos procesados};
+\node[process, below right=0.3cm and 0.3cm of processed] (transformation) {Transformaci\'on};
+\node[output, below right=0.3cm and 0.3cm of transformation] (transformed) {Datos transformados};
+
+
+% Arrows for ETL
+\draw[arrow] (data) -- (selection);
+\draw[arrow] (selection) -- (selected);
+\draw[arrow] (selected) -- (processing);
+\draw[arrow] (processing) -- (processed);
+\draw[arrow] (processed) -- (transformation);
+\draw[arrow] (transformation) -- (transformed);
+
+
+\end{tikzpicture}
+
+\end{tcolorbox}
