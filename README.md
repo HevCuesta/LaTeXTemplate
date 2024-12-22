@@ -1,4 +1,3 @@
 # Template para apuntes y ejercicios
 
-Template más eificiente para apuntes y ejercicios durante Ing. Informática
-# Apuntes-InteligenciaArtificial
+Template más eficiente para apuntes y ejercicios Ing. Informática
