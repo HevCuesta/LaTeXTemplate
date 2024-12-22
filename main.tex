@@ -1,0 +1,68 @@
+\documentclass[oneside]{book}
+
+% Paquetes necesarios
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc}    
+\usepackage[spanish]{babel}  
+\usepackage{fancyhdr}         
+\usepackage{amsmath, amssymb, amsfonts, amsthm}
+\usepackage{hyperref}       
+\usepackage{fullpage}       
+\usepackage{titlesec}     
+\usepackage{graphicx}          
+\usepackage{ragged2e}          
+\usepackage[backend=biber,style=numeric]{biblatex}
+
+\addbibresource{referencias.bib} 
+
+% Configuración de encabezados y pies de página
+\setlength{\headheight}{15.0pt}   % Ajuste de headheight para evitar advertencias
+\pagestyle{fancy}
+\fancyhf{}   
+
+\fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyhead[R]{Tema \thechapter}
+    \fancyhead[L]{Asignatura}
+    \fancyfoot[C]{\thepage}
+    \renewcommand{\headrulewidth}{0.4pt}
+}
+
+% Redefinir el nombre de los capítulos de "Capítulo" a "Tema"
+\renewcommand{\chaptername}{Tema}
+
+% Personalizar el formato del capítulo para mostrar "Tema X: Título del Tema"
+\titleformat{\chapter}[hang]
+  {\bfseries\Huge}                   % Cambiado de \Huge a \LARGE para reducir tamaño
+  {Tema \thechapter}                 % Formato del número del capítulo
+  {1em}                               % Espacio entre el número y el título
+  {}                                  % Formato del título del capítulo
+
+% Ajustar el espaciado antes y después del título del capítulo
+\titlespacing*{\chapter}{0pt}{-1em}{1em} % Reduce el espacio antes del título
+
+% Eliminación de márgenes adicionales
+\setlength{\parindent}{0pt}          % Sin indentación en párrafos
+
+% Comando personalizado (si es necesario)
+\newcommand{\Lagr}{\mathcal{L}}
+
+\begin{document}
+
+% Inclusión de la portada
+\input{Portada}
+
+% Reiniciar el contador de páginas después de la portada
+\setcounter{page}{1}
+
+% Inclusión de Tema 1
+\chapter{} % Define el título del capítulo
+\input{Tema1}
+
+\chapter{}
+\input{Tema2}
+
+
+\input{Referencias}
+
+\end{document}
