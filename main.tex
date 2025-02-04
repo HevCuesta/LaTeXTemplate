@@ -1,4 +1,4 @@
-\documentclass[oneside]{book}
+\documentclass[titlepage,openright,twoside,a4paper,12pt,spanish]{book}
 
 % Paquetes necesarios
 \usepackage[utf8]{inputenc} 
@@ -16,6 +16,7 @@
 \usepackage{listings} % Para incluir código fuente
 \usepackage{tikz}
 \usepackage{pgfplots}
+\usepackage{tocbibind}
 \pgfplotsset{compat=1.18}
 
 \addbibresource{referencias.bib} 
@@ -25,10 +26,14 @@
 
 \fancypagestyle{plain}{
     \fancyhf{}
-    \fancyhead[R]{Tema \thechapter}
-    \fancyhead[L]{Asignatura}
+    \fancyhead[R]{        \begin{tikzpicture}[remember picture,overlay]
+      \node[anchor=north east, xshift=-2.5cm, yshift=-1.5cm] at (current page.north east) {
+          \includegraphics[width=3cm]{logo.png}
+      };
+  \end{tikzpicture}}
+    \fancyhead[L]{TFG}
     \fancyfoot[C]{\thepage}
-    \renewcommand{\headrulewidth}{0.4pt}
+    \renewcommand{\headrulewidth}{0.2pt}
 }
 
 \pagestyle{plain}
@@ -39,8 +44,8 @@
 % Personalizar el formato del capítulo para mostrar "Tema X: Título del Tema"
 \titleformat{\chapter}[hang]
   {\bfseries\Huge}                   % Cambiado de \Huge a \LARGE para reducir tamaño
-  {Tema \thechapter :}                 % Formato del número del capítulo
-  {0.5em}                               % Espacio entre el número y el título
+  {Capítulo \thechapter .}                 % Formato del número del capítulo
+  {1em}                               % Espacio entre el número y el título
   {}                                  % Formato del título del capítulo
 
 % Ajustar el espaciado antes y después del título del capítulo
@@ -48,6 +53,7 @@
 
 % Eliminación de márgenes adicionales
 \setlength{\parindent}{0pt}          % Sin indentación en párrafos
+\setlength{\headsep}{10pt}
 
 % Comando personalizado (si es necesario)
 \newcommand{\Lagr}{\mathcal{L}}
@@ -57,11 +63,11 @@
 % Inclusión de la portada
 \input{Portada}
 
-% Reiniciar el contador de páginas después de la portada
-\setcounter{page}{1}
+\input{ResumenAbstract.tex}
 
+\tableofcontents
 % Inclusión de Tema 1
-\chapter{Título 1} % Define el título del capítulo
+\chapter{Introducción} % Define el título del capítulo
 \input{Tema1}
 
 \chapter{Título 2}
