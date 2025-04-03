@@ -1,9 +1,9 @@
-\documentclass[titlepage,openany,twoside,a4paper,12pt,spanish]{book}
+\documentclass[titlepage,openany,a4paper,spanish]{book}
 
 % Paquetes necesarios
 \usepackage[utf8]{inputenc} 
 \usepackage[T1]{fontenc}    
-\usepackage[spanish]{babel}  
+\usepackage[spanish,es-noshorthands]{babel}  
 \usepackage{fancyhdr}         
 \usepackage{amsmath, amssymb, amsfonts, amsthm}
 \usepackage{hyperref}       
@@ -16,7 +16,7 @@
 \usepackage{listings} % Para incluir código fuente
 \usepackage{tikz}
 \usepackage{pgfplots}
-\usepackage{tocbibind}
+\usepackage{csquotes}
 \pgfplotsset{compat=1.18}
 
 \addbibresource{referencias.bib} 
@@ -76,7 +76,7 @@
 \chapter{Objetivos}
 \input{Cap2}
 
-\chapter*{Referencias}
+\chapter{Referencias}
 \input{Referencias}
 
 \end{document}
